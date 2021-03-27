@@ -1,7 +1,7 @@
 import allure
 
 from unittest import TestCase
-from library.httpclient import HttpClient
+from library import httpclient
 
 
 @allure.feature('Test Weather api')
@@ -13,7 +13,7 @@ class Weather(TestCase):
 
         self.host = 'http://www.weather.com.cn'
         self.ep_path = '/data/cityinfo'
-        self.client = HttpClient()
+        self.client = httpclient.HttpClient()
 
     @allure.story('Test of ShenZhen')
     def test_1(self):
